@@ -1,0 +1,85 @@
+/* Reset de márgenes y padding para evitar inconsistencias */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", serif;  /* Cambiado a Times New Roman */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Esto asegura que se ocupe toda la altura de la ventana */
+}
+
+.container {
+    max-width: 500px;  /* El contenedor tiene un ancho máximo */
+    width: 100%;  /* El contenedor ocupa todo el ancho disponible hasta 400px */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;  /* Colocamos los elementos de forma vertical */
+    align-items: center;  /* Centra los elementos en horizontal */
+    justify-content: center;  /* Centra los elementos en vertical */
+}
+
+form {
+    display: flex;
+    flex-direction: column;  /* Coloca los inputs y botones verticalmente */
+    align-items: center;  /* Alinea los inputs y el botón en el centro */
+}
+
+input[type="text"] {
+    padding: 12px;
+    width: 100%;  /* Los inputs ocuparán todo el ancho del contenedor */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+button[type="submit"] {
+    background-color: #3399ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;  /* El botón ocupa todo el ancho disponible */
+    transition: background-color 0.3s ease;
+    margin-top: 10px;  /* Espacio adicional debajo del botón */
+}
+
+button[type="submit"]:hover {
+    background-color: #0097a7;
+}
+
+/* Estilo para el contenedor de resultados */
+.resultado {
+    width: 100%;
+    text-align: center;  /* Centra el contenido */
+    font-family: "Times New Roman", serif;  /* Cambia la fuente a Times New Roman */
+    font-weight: normal;  /* Elimina cualquier negrita aplicada */
+    margin-top: 20px;
+}
+
+/* Estilo para el párrafo dentro de .resultado */
+.resultado p {
+    font-size: 18px;
+    color: #333;
+    font-weight: normal;  /* Asegura que el texto dentro de p no sea negrita */
+    background-color: transparent;  /* Elimina el fondo */
+    padding: 0;  /* Elimina el relleno */
+    border-radius: 0;  /* Elimina los bordes redondeados */
+    box-shadow: none;  /* Elimina la sombra del cuadro */
+    text-transform: none;  /* Asegura que no se aplique ninguna transformación de texto */
+}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Ejercicio 1</title>
+    <link rel="stylesheet" href="/static/css/ejercicio1.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Notas</h2>
+        <form method="POST">
+         <br><label for="nota1">Nota 1:</label>
+            <input type="text" name="nota1" value="{{ request.form['nota1'] if request.form.get('nota1') else '' }}" min="10" max="70" required>
+
+            <label for="nota2">Nota 2:</label>
+            <input type="text" name="nota2" value="{{ request.form['nota2'] if request.form.get('nota2') else '' }}" min="10" max="70" required>
+
+            <label for="nota3">Nota 3:</label>
+            <input type="text" name="nota3" value="{{ request.form['nota3'] if request.form.get('nota3') else '' }}" min="10" max="70" required>
+
+            <label for="asistencia">Asistencia (%):</label>
+            <input type="text" name="asistencia" value="{{ request.form['asistencia'] if request.form.get('asistencia') else '' }}" min="0" max="100" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Mostrar los resultados si existen -->
+        {% if promedio is not none %}
+            <div class="resultado">
+                <p>{{ promedio }}</p>
+                <p>{{ estado }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

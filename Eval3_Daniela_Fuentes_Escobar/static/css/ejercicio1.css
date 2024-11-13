@@ -1,0 +1,90 @@
+/* Reset de márgenes y padding para evitar inconsistencias */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;  /* Cambiado a Arial */
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor principal centrado con un diseño limpio */
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Estilo para los inputs (campos de texto) */
+input[type="text"] {
+    padding: 12px; /* Un poco más de padding para hacerlo más grande */
+    width: 100%; /* Los campos ocupan todo el ancho del contenedor */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 25px; /* Tamaño de letra más grande */
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total */
+    margin-bottom: 0px; /* Espacio entre cada campo */
+    font-weight: normal;  /* Asegura que el texto en los inputs no esté en negrita */
+}
+
+/* Estilo para el botón de enviar  */
+button[type="submit"] {
+    background-color: #3399ff;  /* Azul claro */
+    color: white;  /* Letras blancas */
+    border: none;
+    padding: 10px 20px; /* Botón más pequeño */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    font-size: 16px;
+    width: auto; /* El botón no ocupa todo el ancho */
+    text-decoration: underline;
+    margin-top: 10px; /* Separación hacia abajo */
+    transition: background-color 0.3s ease; /* Transición para efecto hover */
+    float: left; /* Alineamos el botón a la izquierda */
+}
+
+/* Efecto de hover para los botones */
+button[type="submit"]:hover {
+    background-color: #0097a7;  /* Color más oscuro cuando se hace hover */
+}
+
+/* Asegurar que el formulario esté centrado y con un buen espaciado entre los elementos */
+form {
+    display: flex;
+    flex-direction: column;  /* Distribuir los elementos de forma vertical */
+    justify-content: center;
+    align-items: flex-start; /* Alineamos los elementos al inicio */
+    gap: 10px; /* Espaciado entre los elementos */
+}
+
+/* Estilo para las etiquetas (labels) de las notas y asistencia */
+label {
+    font-weight: bold;  /* Establecer las etiquetas en negrita */
+}
+
+/* Estilo para los resultados (Promedio y Estado) */
+.resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: normal;  /* Sin negrita */
+    text-transform: uppercase;  /* En mayúsculas */
+    text-align: left;  /* Alineado a la izquierda */
+}
+
+.resultado p {
+    font-weight: normal;  /* Sin negrita */
+    margin: 5px 0;  /* Un poco de separación entre los resultados */
+}
